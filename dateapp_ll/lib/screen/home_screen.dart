@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.pink[100],
       body: SafeArea(
         bottom: false,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
@@ -64,7 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class _TopPart extends StatelessWidget {
-  _TopPart({Key? key, required this.selectedDate, required this.onPressed})
+  const _TopPart(
+      {Key? key, required this.selectedDate, required this.onPressed})
       : super(key: key);
   final DateTime selectedDate;
   final VoidCallback onPressed;
